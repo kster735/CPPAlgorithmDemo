@@ -5,6 +5,12 @@
 //Sorting a vector of integers using the make_heap(), push_heap()
 //and pop_heap algorithms.
 
+/***********************************************************
+//This code bit is isnspired from Jonathan Boccara's speech
+//"105 STL Algorithms in Less Than an Hour" 
+//given at the 2018 CppCon
+//https://www.youtube.com/watch?v=2olsGf6JIkU&t=1022s
+*//////////////////////////////////////////////////////////
 
 using namespace std;
 
@@ -15,6 +21,7 @@ int main(){
         cout << i << " ";
     }
 
+    // Use the following if prior to C++11
     // for (vector<int>::const_iterator i = v.cbegin(); i != v.cend(); ++i){
     //     cout << *i << " ";
     // }
@@ -70,7 +77,7 @@ int main(){
         //We cannot ommit to copy these because the v vector will still contain
         //the max element which has been popped.
 
-        for (int k=0; k<v.size()-j; k++){
+        for (int k=0; k < v.size()-j; k++){
             v[k] = temp[k];
         }
 
@@ -83,7 +90,7 @@ int main(){
     //reverse(v.begin(), v.end());
 
     for (const auto& i: v){
-        cout << i << " ";
+        cout << i << "";
     }
     cout << "\nOk" <<endl;
 
